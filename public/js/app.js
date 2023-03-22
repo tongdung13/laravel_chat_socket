@@ -17,7 +17,7 @@ $(document).ready(function(){
         data = data.data;
         if(data.user.id==me) {
         $('#messages').append(`
-        
+
         <div style="margin-bottom:10px;">
         <span class="badge badge-primary">`+data.user.name+ `:</span> `+data.body+`
         </div>
@@ -25,23 +25,23 @@ $(document).ready(function(){
         }
         else {
             $('#messages').append(`
-        
+
             <div style="margin-bottom:10px;">
             <span class="badge badge-dark">`+data.user.name+ `:</span> `+data.body+`
             </div>
                     `)
         }
     });
-    
+
     socket.on('left',function(data) {
         data = data.data;
         $('#messages').append(`
-        
+
         <div style="margin-bottom:10px;">
         <span class="badge badge-gray">`+data.user.name+ ` left the chat .</span>         </div>
                 `)    });
 
-    
+
     $('#toSend').keypress(function(e) {
         if(e.which==13) {
             let text = $('#toSend').val();
@@ -58,7 +58,7 @@ $(document).ready(function(){
                   }
               }).fail(function(r) {
                   console.log(r)
-              });       
+              });
         }
     })
 });
