@@ -24,7 +24,7 @@
     <script>
         let me = "{{ Auth::user()->id }}";
     </script>
-    <script src="/js/j.js"></script>
-    <script src="/js/n.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="{{ asset('/js/j.js') }}"></script>
+    <script src="{{ asset('/js/n.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
 @stop
