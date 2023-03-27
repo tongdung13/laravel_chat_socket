@@ -1,8 +1,7 @@
 let server = require('http').Server();
 let socket = require('socket.io')(server);
-const PORT = process.env.PORT || 9010;
 redis = new require('ioredis')();
-server.listen(PORT)
+server.listen(3000)
 console.log('Server is running ...');
 socket.on('connection',function(io) {
 	io.emit('welcome','You are now successfully connected to the socket .');
