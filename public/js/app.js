@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let socket = io('127.0.0.1:3000')
+    let socket = io('127.0.0.1:9010')
     socket.on('welcome',function(data) {
         $('.server_error').hide();
         $('.pending_msg').hide();
